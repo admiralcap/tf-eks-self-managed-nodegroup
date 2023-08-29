@@ -1,0 +1,6 @@
+.terraform*
+id_rsa*
+terraform.tfstate*
+thegrandplan
+aws-auth-cm.yaml*
+finish.sh
