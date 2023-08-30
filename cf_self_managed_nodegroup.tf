@@ -1,23 +1,6 @@
 resource "aws_cloudformation_stack" "cluster-nodes-stack" {
     name = var.cluster-nodes-stack-name
     template_url = "https://s3.us-west-2.amazonaws.com/amazon-eks/cloudformation/2022-12-23/amazon-eks-nodegroup.yaml"
-    # parameters = {
-    #     NodeGroupName = "my-node-group"
-    #     NodeAutoScalingGroupMinSize = 1
-    #     NodeAutoScalingGroupDesiredCapacity = 3
-    #     NodeAutoScalingGroupMaxSize = 30
-    #     NodeInstanceType = "t3.micro"
-
-
-    #     ClusterName = var.eks-cluster-name
-    #     KeyName = aws_key_pair.my-keypair.key_name
-    #     ClusterControlPlaneSecurityGroup = aws_cloudformation_stack.eks-vpc-stack.outputs["SecurityGroups"]
-    #     VpcId = aws_cloudformation_stack.eks-vpc-stack.outputs["VpcId"]
-        
-    #     # The type in the template is "List" which is actually a comma separated
-    #     # string list for cloudformation not a terraform list.
-    #     Subnets = join(",", data.aws_subnets.eks-vpc-subnets-private.ids)
-    # }
 
     parameters = merge(
         var.node-group-basic-parameters,
