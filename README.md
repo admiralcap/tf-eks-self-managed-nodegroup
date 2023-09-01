@@ -23,8 +23,7 @@ terraform modules.
 
 ## Prerequisites
 
-The prerequisits are the same as in the getting started guide linked above:
-
+- [terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)  
 - [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)  
   Configured with an access key: `$ aws configure`  
 - [kubectl](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html)  
